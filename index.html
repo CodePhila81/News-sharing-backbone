@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-framework="backbonejs">
+	<head>
+		<meta charset="utf-8">
+		<title>News sharing with Backbone</title>
+	</head>
+	<body>
+		<section class="newsapp">
+			<header class="header">
+				<h1>Share some news!</h1>
+				<input class="new-name" placeholder="Your name" autofocus>
+				<input class="new-link" placeholder="Your link">
+				<input class="new-desc" placeholder="Say something about this link">
+				<button class="submit-news-item">Submit</button>
+			</header>
+			<section class="main">
+				<ul class="news-list"></ul>
+			</section>
+		</section>
+		<script type="text/template" id="newsitem-template">
+			<div class="view">
+				<p>
+					<label><%- username %></label> shared	<label><%- url %></label>
+				</p>
+				<label><%- description %></label>
+				<button class="destroy">X</button>
+			</div>
+		</script>
+
+		<script src="node_modules/todomvc-common/base.js"></script>
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/underscore/underscore.js"></script>
+		<script src="node_modules/backbone/backbone.js"></script>
+		<script src="node_modules/backbone.localstorage/backbone.localStorage.js"></script>
+		<script src="js/models/newsitem.js"></script>
+		<script src="js/collections/newsitems.js"></script>
+		<script src="js/views/newsitem-view.js"></script>
+		<script src="js/views/app-view.js"></script>
+		<script src="js/routers/router.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
